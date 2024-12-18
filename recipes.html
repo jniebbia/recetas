@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recetas Argentinas</title>
+  <link rel="stylesheet" href="../styles/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      color: #212529;
+    }
+    .recipe-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    .recipe-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    h2, h3 {
+      color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Recetas Argentinas</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="recipes.html">Recetas</a></li>
+          <li class="nav-item"><a class="nav-link" href="submit.html">Enviar Receta</a></li>
+          <li class="nav-item"><a class="nav-link" href="random-recipe.html">Receta Sorpresa</a></li>
+          <li class="nav-item"><a class="nav-link" href="curriculum.html">Currículum</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Encabezado -->
+  <header class="bg-light text-center py-5">
+    <h1>Recetas Argentinas</h1>
+    <p>Descubre y disfruta los platos más icónicos de la cocina argentina.</p>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main class="container my-5">
+    <div class="row">
+      <!-- Empanada -->
+      <div class="col-md-4">
+        <div class="recipe-card">
+          <img src="../images/empanada.jpg" alt="Empanada" class="recipe-img">
+          <h3>Empanada</h3>
+          <p>Un pastel salado relleno de carne molida, cebolla y especias.</p>
+          <h4>Ingredientes:</h4>
+          <ul>
+            <li>500 g de carne molida</li>
+            <li>1 cebolla grande picada</li>
+            <li>1 papa mediana en cubos</li>
+            <li>2 huevos duros</li>
+            <li>Masa para empanadas</li>
+          </ul>
+          <h4>Instrucciones:</h4>
+          <ol>
+            <li>Sofríe la cebolla y agrega la carne hasta dorar.</li>
+            <li>Mezcla con la papa cocida y los huevos picados.</li>
+            <li>Rellena la masa, cierra y hornea a 190°C por 25 minutos.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Asado -->
+      <div class="col-md-4">
+        <div class="recipe-card">
+          <img src="../images/asado.jpg" alt="Asado" class="recipe-img">
+          <h3>Asado</h3>
+          <p>Carne a la parrilla cocinada lentamente para un sabor ahumado.</p>
+          <h4>Ingredientes:</h4>
+          <ul>
+            <li>Costillas de res</li>
+            <li>Sal gruesa</li>
+            <li>Carbón para asar</li>
+          </ul>
+          <h4>Instrucciones:</h4>
+          <ol>
+            <li>Prende el carbón y deja que arda hasta estar blanco.</li>
+            <li>Sazona la carne y colócala en la parrilla a fuego lento.</li>
+            <li>Asa durante 2–3 horas hasta que la carne esté tierna.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Milanesa -->
+      <div class="col-md-4">
+        <div class="recipe-card">
+          <img src="../images/milanesa.jpg" alt="Milanesa" class="recipe-img">
+          <h3>Milanesa</h3>
+          <p>Carne de res o pollo empanizada y frita a la perfección.</p>
+          <h4>Ingredientes:</h4>
+          <ul>
+            <li>4 filetes finos de res o pollo</li>
+            <li>2 huevos batidos</li>
+            <li>Pan rallado</li>
+            <li>Sal y perejil</li>
+            <li>Aceite para freír</li>
+          </ul>
+          <h4>Instrucciones:</h4>
+          <ol>
+            <li>Pasa los filetes por huevo batido y pan rallado.</li>
+            <li>Fríe en aceite caliente hasta dorar.</li>
+            <li>Escurre sobre papel y sirve con limón.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Pie de Página -->
+  <footer class="text-center bg-dark text-white py-3">
+    <p>&copy; 2024 Recetas Argentinas. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="../scripts/bootstrap.bundle.min.js"></script>
+</body>
+</html>
