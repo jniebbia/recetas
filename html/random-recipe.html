@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receta Sorpresa</title>
+  <link rel="stylesheet" href="../styles/bootstrap.min.css">
+  <link rel="stylesheet" href="../styles/styles.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .recipe-container {
+      margin-top: 50px;
+    }
+    #recipeImage {
+      max-height: 200px;
+      border-radius: 10px;
+    }
+    .card {
+      border: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Recetas Argentinas</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="recipes.html">Recetas</a></li>
+            <li class="nav-item"><a class="nav-link" href="submit.html">Enviar Receta</a></li>
+            <li class="nav-item"><a class="nav-link" href="random-recipe.html">Receta Sorpresa</a></li>
+            <li class="nav-item"><a class="nav-link" href="curriculum.html">Currículum</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido Principal -->
+  <main class="container recipe-container">
+    <div class="text-center mb-5">
+      <h1 class="display-4">¡Receta Sorpresa!</h1>
+      <p class="lead">Haz clic en el botón para descubrir una receta al azar.</p>
+      <button class="btn btn-primary btn-lg" onclick="generateRandomRecipe()">Mostrar Receta</button>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card text-center">
+          <div class="card-body">
+            <h3 class="card-title" id="recipeName"></h3>
+            <p class="card-text" id="recipeDescription"></p>
+            <img id="recipeImage" src="" alt="" class="img-fluid mt-3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Pie de Página -->
+  <footer class="text-center bg-dark text-white py-3 mt-5">
+    <p>&copy; 2024 Recetas Argentinas. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const recipes = [
+      {
+        name: "Empanadas",
+        description: "Un pastel relleno de carne y especias.",
+        image: "../images/empanada.jpg"
+      },
+      {
+        name: "Asado",
+        description: "Carne a la parrilla con un sabor ahumado irresistible.",
+        image: "../images/asado.jpg"
+      },
+      {
+        name: "Milanesa",
+        description: "Carne empanizada, frita hasta estar dorada y crujiente.",
+        image: "../images/milanesa.jpg"
+      }
+    ];
+
+    function generateRandomRecipe() {
+      const randomIndex = Math.floor(Math.random() * recipes.length);
+      const recipe = recipes[randomIndex];
+      document.getElementById("recipeName").textContent = recipe.name;
+      document.getElementById("recipeDescription").textContent = recipe.description;
+      document.getElementById("recipeImage").src = recipe.image;
+      document.getElementById("recipeImage").alt = recipe.name;
+    }
+  </script>
+</body>
+</html>
